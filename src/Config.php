@@ -1,5 +1,31 @@
 <?php
 
-define('APP_PATH', 'your_app_path_here');
-define('APP_KEY', 'your_app_key_here');
-define('APP_SECRET', 'your_app_secret_here');
+// url base da aplicação
+define('APP_ROOT', GetConfig("APP_ROOT"));
+
+// Chaves de acesso da API
+define('APP_KEY', GetConfig("APP_KEY"));
+define('APP_SECRET', GetConfig("APP_SECRET"));
+
+// modo para depuração
+define("DEBUG", GetConfig("APP_DEBUG"));
+
+if(DEBUG){
+    ini_set('display_errors',1);
+    ini_set('display_startup_erros',1);
+    error_reporting(E_ALL);
+}
+
+/**
+ * Aqui pois o Config precisa desta função
+ */
+function GetConfig(string $chave)
+{
+    static $envs;
+
+    if (!$envs) {
+        $envs = parse_ini_file('src/Settings.conf');
+    }
+
+    return empty($envs[$chave]) ? null : $envs[$chave];
+}
