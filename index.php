@@ -21,7 +21,10 @@ $route = new Router(APP_ROOT);
  */
    $route->group(null);
    $route->get("/", "Web:home");
+   $route->get("/home", "Web:home");
    $route->get("/info", "Web:info");
+   $route->get("/testes", "Web:testes");
+   $route->get("/contato", "Web:contato");
 
 /**
  * Group Error

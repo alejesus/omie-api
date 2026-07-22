@@ -36,6 +36,20 @@ class Web
 
    }
 
+   public function testes(): void
+   {
+
+      echo "testes ...";
+
+   }
+
+   public function contato(): void
+   {
+
+      echo $this->view->render( "contato", [] );
+
+   }
+
    public function errors(array $data): void
    {
 

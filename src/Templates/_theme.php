@@ -27,7 +27,8 @@
       echo $this->section("sidebar");
    else: ?>
       <a title="" href="<?= url("home"); ?>">Home</a>
-      <a title="" href="<?= url("updates"); ?>">Updates</a>
+      <a title="" href="<?= url("info"); ?>">Informações</a>
+      <a title="" href="<?= url("testes"); ?>">Testes</a>
       <a title="" href="<?= url("contato"); ?>">Contato</a>
    <?php
    endif; ?>
@@ -38,7 +39,7 @@
 </main>
 
 <footer class="main_footer">
-   Omie API - Todos os Direitos Reservados
+   APIs - Todos os Direitos Reservados
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
