@@ -1,4 +1,4 @@
-ewriteEngine On
+RewriteEngine On
 #Options All -Indexes
 
 ## ROUTER WWW Redirect.

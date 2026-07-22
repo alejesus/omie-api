@@ -29,3 +29,12 @@ function GetConfig(string $chave)
 
     return empty($envs[$chave]) ? null : $envs[$chave];
 }
+
+function url(string $uri = null): string
+{
+    if ($uri) {
+        return APP_ROOT . "/{$uri}";
+    }
+
+    return APP_ROOT;
+}
