@@ -1,0 +1,27 @@
+{
+    "name": "omie/api_testes",
+    "description": "Exemplo de teste de APIs Omie",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre Bassanezi",
+            "email": "alejesus@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+      "vendor-dir": "vendor"  
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "src/"
+        },
+        "files": [
+            "src/Config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/router": "^2.0"
+    }
+}
